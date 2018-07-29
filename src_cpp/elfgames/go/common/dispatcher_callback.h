@@ -24,7 +24,7 @@ class DispatcherCallback {
     const size_t thread_idx = stoi(addr.label.substr(5));
     if (thread_idx == 0) {
       // Actionable request
-     # std::cout << elf_utils::now()
+      std::cerr << elf_utils::now()
                 << ", EvalCtrl get new request: " << request->info()
                 << std::endl;
     }
@@ -53,7 +53,7 @@ class DispatcherCallback {
         case RestartReply::UPDATE_MODEL:
         case RestartReply::UPDATE_MODEL_ASYNC:
           if (request != nullptr && *request != requests[i]) {
-           # std::cout << elf_utils::now()
+            std::cerr << elf_utils::now()
                       << "Request inconsistent. existing request: "
                       << request->info()
                       << ", now request: " << requests[i].info() << std::endl;
@@ -71,7 +71,7 @@ class DispatcherCallback {
 
     if (request != nullptr) {
       // Once it is done, send to Python side.
-     # std::cout << elf_utils::now() << " Get actionable request: black_ver = "
+      std::cerr << elf_utils::now() << " Get actionable request: black_ver = "
                 << request->vers.black_ver
                 << ", white_ver = " << request->vers.white_ver
                 << ", #addrs_to_reply: " << n << std::endl;
