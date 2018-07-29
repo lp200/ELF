@@ -69,11 +69,11 @@ class ThreadedDispatcherT : public ThreadedCtrlBase {
 
   void before_loop() override {
     // Wait for all games + this processing thread.
-    std::cout << "Wait all games[" << num_games_
+   # std::cout << "Wait all games[" << num_games_
               << "] to register their mailbox" << std::endl;
     game_counter_.waitUntilCount(num_games_);
     game_counter_.reset();
-    std::cout << "All games [" << num_games_ << "] registered" << std::endl;
+   # std::cout << "All games [" << num_games_ << "] registered" << std::endl;
 
     addrs_ = ctrl_.filterPrefix(std::string("game"));
     for (size_t i = 0; i < addrs_.size(); ++i) {
