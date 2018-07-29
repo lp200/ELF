@@ -350,7 +350,7 @@ class CommT : public CommInternalT<
         typename ServerLabelMap::const_accessor elem;
         bool found = pp_->serverLabels_.find(elem, label);
         if (!found) {
-         # std::cout << "WARNING! no servers has the label: " << label
+          std::cerr << "WARNING! no servers has the label: " << label
                     << std::endl;
         } else {
           const std::vector<Id>& ids = *(elem->second);
