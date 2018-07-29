@@ -25,7 +25,7 @@ _logger_factory = logging.IndexedLoggerFactory(
 def load_module(mod):
     """Load a python module."""
     module = importlib.import_module(mod)
-    print(module, mod)
+   # print(module, mod)
     return module
 
 
