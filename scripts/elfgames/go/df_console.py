@@ -16,10 +16,10 @@ from rlpytorch import Evaluator, load_env
 
 
 def main():
-    print('Python version:', sys.version)
-    print('PyTorch version:', torch.__version__)
-    print('CUDA version', torch.version.cuda)
-    print('Conda env:', os.environ.get("CONDA_DEFAULT_ENV", ""))
+   # print('Python version:', sys.version)
+   # print('PyTorch version:', torch.__version__)
+   # print('CUDA version', torch.version.cuda)
+   # print('Conda env:', os.environ.get("CONDA_DEFAULT_ENV", ""))
 
     additional_to_load = {
         'evaluator': (
