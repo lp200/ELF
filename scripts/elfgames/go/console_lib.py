@@ -8,6 +8,7 @@ import inspect
 import traceback
 from collections import Counter
 
+import sys
 
 def move2xy(v):
     if v.lower() == "pass":
@@ -308,7 +309,7 @@ class GoConsoleGTP:
         return xy2move(x, y)
 
     def showboard(self, batch):
-        print(batch.GC.getGame(0).showBoard())
+        print(batch.GC.getGame(0).showBoard(), file=sys.stderr)
 
     def get_next_player(self, batch):
         return batch.GC.getGame(0).getNextPlayer()
