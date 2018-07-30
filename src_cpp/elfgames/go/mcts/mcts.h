@@ -208,7 +208,7 @@ class MCTSActor {
       const std::string msg = "model version " + std::to_string(reply.version) +
           " and required version " + std::to_string(params_.required_version) +
           " are not consistent";
-      std::cout << msg << std::endl;
+      std::cerr << msg << std::endl;
       throw std::runtime_error(msg);
     }
 
