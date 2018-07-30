@@ -10,6 +10,7 @@ import random
 import time
 import torch
 import warnings
+import sys
 
 from elf.options import import_options, PyOptionSpec
 from elf import logging
@@ -25,7 +26,7 @@ _logger_factory = logging.IndexedLoggerFactory(
 def load_module(mod):
     """Load a python module."""
     module = importlib.import_module(mod)
-   # print(module, mod)
+    print(module, mod, file=sys.stderr))
     return module
 
 
