@@ -14,6 +14,8 @@ import torch
 from console_lib import GoConsoleGTP
 from rlpytorch import Evaluator, load_env
 
+sys.path.append( os.path.expanduser('~/anaconda3/lib/python3.6/site-packages') )
+
 
 def main():
     print('Python version:', sys.version, file=sys.stderr)
