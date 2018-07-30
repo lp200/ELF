@@ -17,8 +17,6 @@ from console_lib import GoConsoleGTP
 from rlpytorch import Evaluator, load_env
 
 
-
-
 def main():
     print('Python version:', sys.version, file=sys.stderr)
     print('PyTorch version:', torch.__version__, file=sys.stderr)
