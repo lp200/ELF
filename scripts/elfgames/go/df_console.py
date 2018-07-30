@@ -9,12 +9,14 @@
 import os
 import sys
 
+sys.path.append( os.path.expanduser('~/anaconda3/lib/python3.6/site-packages') )
+
 import torch
 
 from console_lib import GoConsoleGTP
 from rlpytorch import Evaluator, load_env
 
-sys.path.append( os.path.expanduser('~/anaconda3/lib/python3.6/site-packages') )
+
 
 
 def main():
