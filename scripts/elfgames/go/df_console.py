@@ -9,6 +9,8 @@
 import os
 import sys
 
+sys.path.append( os.path.expanduser('~/anaconda3/lib/python3.6/site-packages') )
+
 import torch
 
 from console_lib import GoConsoleGTP
@@ -16,10 +18,10 @@ from rlpytorch import Evaluator, load_env
 
 
 def main():
-   # print('Python version:', sys.version)
-   # print('PyTorch version:', torch.__version__)
-   # print('CUDA version', torch.version.cuda)
-   # print('Conda env:', os.environ.get("CONDA_DEFAULT_ENV", ""))
+    print('Python version:', sys.version, file=sys.stderr)
+    print('PyTorch version:', torch.__version__, file=sys.stderr)
+    print('CUDA version', torch.version.cuda, file=sys.stderr)
+    print('Conda env:', os.environ.get("CONDA_DEFAULT_ENV", ""), file=sys.stderr)
 
     additional_to_load = {
         'evaluator': (
